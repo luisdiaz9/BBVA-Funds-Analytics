@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PyMart Scatter Plots</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://MomentJS.com/downloads/moment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="../contaBMER/table/data.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../contaBMER/table/style.css">
+  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="../contaBMER/table/index.html">Search Engine for Data
+			  <img class="nav-ufo" src="../contaBMER/table/Pymark.jpg">
+			</a>
+		  </div>
+			<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"> Scatter Plots
+  
+			</a>
+		  </div>
+			<!--<div class="navbar-header">
+			<a class="navbar-brand" href="model.html">Linear Regression Model
+  
+			</a>
+		  </div>-->
+		</div>
+	  </nav>
+</head>
+<body>
+
+  <p>
+		<div class="form-group">
+				<label for="inputName">Initial date</label>
+					<input type="date" class="form-control" id="inputFecha" name="petFecha" data-date-inline-picker="true" />
+		
+			<label for="inputName">End date</label>
+			<input type="date" class="form-control" id="outputFecha" name="petFecha" data-date-inline-picker="true" />
+	</div>
+	<select id="oferta1" onchange="this.value" >
+		<option disable="" value="">Branch</option>
+		<option value="BBVAGUB">BBVAGUB</option>
+		<option value="B+DLP">B+DLP</option>
+		<option value="BMERPAT">BMERPAT</option>
+		<option value="B+GFD">B+GFD</option>
+		<option value="B+PZO">B+PZO</option>
+		<option value="BMERMP">BMERMP</option>
+		<option value="B+GF">B+GF</option>
+		<option value="DMEDIO">DMEDIO</option>
+		<option value="B+REAL">B+REAL</option>
+		<option value="B+MRF">B+MRF</option>
+		<option value="BBVAC+">BBVAC+</option>
+		<option value="B+RF">B+RF</option>
+		<option value="B+DCP">B+DCP</option>
+		<option value="B+GUB">B+GUB</option>
+		<option value="FOE-C">FOE-C</option>
+		<option value="BMERLIQ">BMERLIQ</option>
+		<option value="B+EDUCA">B+EDUCA</option>
+		<option value="F+LIQ">F+LIQ</option>
+		<option value="B+PC">B+PC</option>
+		<option value="BMER30">BMER30</option>
+		<option value="BBVAAF">BBVAAF</option>
+		<option value="BBVAAP">BBVAAP</option>
+		<option value="BBVALAT">BBVALAT</option>
+		<option value="BMERIND">BMERIND</option>
+		<option value="B+TOP">B+TOP</option>
+		<option value="FOE-M">FOE-M</option>
+		<option value="FOE-A">FOE-A</option>
+		<option value="B+CR">B+CR</option>
+		<option value="BBVANDQ">BBVANDQ</option>
+		<option value="BBVACD+">BBVACD+</option>
+		<option value="BBVADOL">BBVADOL</option>
+		<option value="B+PCDOL">B+PCDOL</option>
+		<option value="FOEDL-C">FOEDL-C</option>
+		<option value="BBVAEUR">BBVAEUR</option>
+		<option value="B+GLOBL">B+GLOBL</option>
+		<option value="B+GFDOL">B+GFDOL</option>
+		<option value="FOEDL-M">FOEDL-M</option>
+		<option value="FOEDL-A">FOEDL-A</option>
+		<option value="B+RVUS2">B+RVUS2</option>
+		<option value="B+RVUSA">B+RVUSA</option>
+		<option value="BMERINF">BMERINF</option>
+		<option value="BBVAEMG">BBVAEMG</option>
+		<option value="B+CRDOL">B+CRDOL</option>
+		<option value="BBVAE50">BBVAE50</option>
+		<option value="BBVAXJP">BBVAXJP</option>
+		<option value="OMINT">OMINT</option>
+		
+
+	</select>
+	<select id="oferta2" onchange="this.value" >
+		<option disable="" value="">Shift</option>
+		<option value="C">C</option>
+		<option value="B">B</option>
+		<option value="MB">MB</option>
+		<option value="B2">B2</option>
+		<option value="B1">B1</option>
+		<option value="GB">GB</option>
+		<option value="E">E</option>
+		<option value="B4">B4</option>
+		<option value="B3">B3</option>
+		<option value="UHN">UHN</option>
+		<option value="PV">PV</option>
+		<option value="P">P</option>
+		
+		
+
+	</select>
+	<select id="oferta3" onchange="this.value" >
+		<option disable="" value="">Volumen</option>
+		<option value='Deuda'>Deuda</option>
+		<option value='Renta Variable'>Renta Variable</option>
+		<option value='VACIO'>VACIO</option>
+
+	</select>
+    <select id="respuesta1" onchange="this.value" >
+	<option disable="debit" value="debit">debit</option>
+        <option value="debit">debit</option>
+        <option value="credit">credit</option>
+   </select>
+
+    <select id="respuesta2" onchange="this.value" >
+	<option disable="credit" value="credit">credit</option>
+        <option value="debit">debit</option>
+        <option value="credit">credit</option>
+    </select>
+ 
+
+
+
+    <button name="App" value="submit" onclick="updateInfo();" >Submit</button>
+  </p>
+
+
+
+  <div id="plot"></div>
+<div id="plot1"></div>
+<div id="plot2"></div>
+<div id="plot3"></div>
+<div id="plot4"></div>
+<div id="plot5"></div>
+<div id="plot6"></div>
+<div id="plot7"></div>
+<div id="plot8"></div>
+<div id="plot9"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+  <script src="plots.js"></script>
+  <!--<iframe id="processor" src="index2.html" frameborder="0" allowfullscreen
+  style="position:absolute;top:70%;left:0;width:100%;height:100%;"></iframe>
+  <iframe id="processor" src="index3.html" frameborder="0" allowfullscreen
+  style="position:absolute;top:140%;left:0;width:100%;height:100%;"></iframe>-->
+</body>
+</html>
