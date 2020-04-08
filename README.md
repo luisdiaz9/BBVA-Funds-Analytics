@@ -6,7 +6,7 @@ In order to run the code, it is required:<br>
 * Google Chrome, Firefox or any other Internet Explorer<br>
 * Utilizes Python, JSON, JavaScript, Plotly, HTML.<br>
 ### Screenshots
-For example, the loss of all Share instruments during coronavirus crisis is depicted as follow:<br>
+For example, the loss of all equity instruments during coronavirus crisis is depicted as follow:<br>
 CoronavirusCrisisInSharesMarket.jpg<br>
 ![CoronavirusCrisisInSharesMarket](CoronavirusCrisisInSharesMarket.jpg)<br><br>
 
