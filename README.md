@@ -18,7 +18,7 @@ The dashboard shows funds' information scraped from different websites on a chos
 The scatter plot displays a profit comparison between all of them. <br>
 A search engine breaks down every item in the database such as the most current
 price obtained from the Bancomer Asset Management websites.
-The pie charts depict actual profits (credit) of multiple 1000 MXN investments recorded into a double entry accounting
+The pie charts depict actual profits (debits) of multiple 1000 MXN investments recorded into a double entry accounting
 system such as debits, credits and balances from January to April 2020. In the
 dashboard, interactive scatter plots illustrate cumulative amounts in pesos, capability expenditure
 in percentage and total profits per fund or type of fund (Debt or Equity Market). Tools used: Python, JSON, JavaScript,
